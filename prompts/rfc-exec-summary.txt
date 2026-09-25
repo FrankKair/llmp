@@ -1,0 +1,82 @@
+# RFC Executive Summary
+
+Read the RFC deeply and produce a concise executive summary for an engineer
+who has not read it yet.
+
+Do not critique the RFC in this response. Focus on accurately explaining what
+it proposes and why.
+
+Include:
+
+1. Problem
+   - What problem is being solved?
+   - Who or what is affected?
+
+2. Proposal
+   - What is being built or changed?
+   - How does it work at a high level?
+
+3. Context
+   - Important existing systems, constraints, assumptions, or terminology.
+
+4. Alternatives
+   - What alternatives were considered?
+   - Why was the proposed approach selected?
+
+5. Risks and trade-offs
+   - The most important costs, risks, limitations, or operational concerns.
+
+6. ASCII architecture or flow diagram
+   - Show the main components and important interactions.
+   - Keep the diagram readable and do not include unnecessary detail.
+
+7. Decision status
+   - State whether the RFC is proposing, accepted, rejected, experimental, or
+     unclear.
+
+Keep the summary short and information-dense. Avoid repeating the RFC.
+
+If the RFC is ambiguous or omits important context, list those items briefly
+under "Unclear or missing context". Do not invent explanations.
+
+Use this structure:
+
+# [RFC title]
+
+## Summary
+
+[Short paragraph]
+
+## Problem
+
+[Concise explanation]
+
+## Proposal
+
+[Concise explanation]
+
+## Context and assumptions
+
+[Bullets]
+
+## Alternatives
+
+[Bullets]
+
+## Architecture
+
+```
+[ASCII diagram]
+```
+
+## Risks and trade-offs
+
+[Bullets]
+
+## Decision status
+
+[Status]
+
+## Unclear or missing context
+
+[Bullets, or "None identified"]

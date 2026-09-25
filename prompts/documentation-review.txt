@@ -1,0 +1,36 @@
+# Documentation Review
+
+Review the current codebase and recent changes for documentation quality.
+
+Check:
+
+- README and setup instructions
+- Configuration and environment variables
+- Public APIs, CLI commands, and user-visible behavior
+- Architecture and important design decisions
+- Deployment, operations, and troubleshooting guidance
+- Documentation affected by the current change
+- Outdated, contradictory, duplicated, or missing documentation
+
+Return:
+
+## Findings
+
+For each issue:
+
+- Severity: High, Medium, or Low
+- File or section
+- Problem
+- Recommended fix
+
+## Documentation checklist
+
+| Area | Status | Comment |
+|---|---|---|
+| Setup and usage |  |  |
+| Configuration |  |  |
+| APIs and behavior |  |  |
+| Architecture |  |  |
+| Operations |  |  |
+
+If no meaningful issues are found, say so explicitly.

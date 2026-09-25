@@ -1,0 +1,109 @@
+#!/usr/bin/env bash
+
+set -u
+
+resolve_script_path() {
+  local source="$1"
+
+  while [[ -L "$source" ]]; do
+    local dir
+    local target
+
+    dir="$(cd -- "$(dirname -- "$source")" && pwd -P)"
+    target="$(readlink "$source")"
+
+    if [[ "$target" == /* ]]; then
+      source="$target"
+    else
+      source="$dir/$target"
+    fi
+  done
+
+  printf '%s/%s\n' \
+    "$(cd -- "$(dirname -- "$source")" && pwd -P)" \
+    "$(basename -- "$source")"
+}
+
+SCRIPT_PATH="$(resolve_script_path "$0")"
+REPO_DIR="$(cd -- "$(dirname -- "$SCRIPT_PATH")" && pwd -P)"
+
+LLMP_DIR="${LLMP_DIR:-$REPO_DIR/prompts}"
+
+if [[ ! -d "$LLMP_DIR" ]]; then
+  printf 'llmp: prompts directory not found: %s\n' "$LLMP_DIR" >&2
+  exit 1
+fi
+
+if ! command -v fzf >/dev/null 2>&1; then
+  printf 'llmp: fzf is required but was not found in PATH.\n' >&2
+  exit 1
+fi
+
+# Select the first available clipboard command:
+# macOS   -> pbcopy
+# Wayland -> wl-copy
+# X11     -> xclip or xsel
+if command -v pbcopy >/dev/null 2>&1; then
+  CLIPBOARD_CMD=(pbcopy)
+elif command -v wl-copy >/dev/null 2>&1; then
+  CLIPBOARD_CMD=(wl-copy)
+elif command -v xclip >/dev/null 2>&1; then
+  CLIPBOARD_CMD=(xclip -selection clipboard)
+elif command -v xsel >/dev/null 2>&1; then
+  CLIPBOARD_CMD=(xsel --clipboard --input)
+else
+  printf 'llmp: no supported clipboard command was found.\n' >&2
+  printf 'Install pbcopy, wl-copy, xclip, or xsel.\n' >&2
+  exit 1
+fi
+
+# Build a list of paths relative to LLMP_DIR.
+prompt_list="$(
+  cd "$LLMP_DIR" &&
+    find . -type f -name '*.txt' -print |
+    sed 's#^\./##' |
+    sort
+)"
+
+if [[ -z "$prompt_list" ]]; then
+  printf 'llmp: no .txt prompts found in %s\n' "$LLMP_DIR" >&2
+  exit 0
+fi
+
+export LLMP_DIR
+
+selected="$(
+  printf '%s\n' "$prompt_list" |
+    fzf \
+      --height='100%' \
+      --layout=reverse \
+      --border \
+      --preview-window='right:60%' \
+      --preview='
+        file="$LLMP_DIR/{}"
+        if [[ -f "$file" ]]; then
+          cat -- "$file"
+        else
+          printf "File not found: %s\n" "$file"
+        fi
+      '
+)"
+
+# Escape/no selection.
+if [[ -z "$selected" ]]; then
+  exit 0
+fi
+
+selected_file="$LLMP_DIR/$selected"
+
+if [[ ! -f "$selected_file" ]]; then
+  printf 'llmp: selected prompt no longer exists: %s\n' "$selected_file" >&2
+  exit 1
+fi
+
+if "${CLIPBOARD_CMD[@]}" < "$selected_file"; then
+  printf 'Copied: %s\n' "$selected"
+else
+  printf 'llmp: failed to copy prompt: %s\n' "$selected" >&2
+  exit 1
+fi

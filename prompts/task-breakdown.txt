@@ -1,0 +1,55 @@
+# Task Breakdown
+
+Turn the requested change into an implementation plan.
+
+Read the task, relevant code, tests, configuration, and documentation before
+planning. Base the plan on the actual repository rather than generic advice.
+
+Return:
+
+## Understanding
+
+- Restate the goal in one or two sentences.
+- List explicit requirements.
+- List inferred constraints and assumptions.
+- Identify ambiguities or decisions that need confirmation.
+
+## Repository impact
+
+List the relevant:
+
+- Files and directories
+- Modules, classes, functions, or commands
+- Tests
+- Configuration
+- Documentation
+- Database or infrastructure components
+
+## Implementation plan
+
+Give an ordered sequence of small, independently verifiable steps.
+
+For each step include:
+
+- Change
+- Location
+- Reason
+- Dependencies on earlier steps
+- How to verify it
+
+## Test plan
+
+Describe the tests needed for:
+
+- Normal behavior
+- Edge cases
+- Invalid input
+- Failure and recovery paths
+- Backward compatibility
+
+## Risks
+
+List the most important technical, operational, migration, and security risks.
+
+Do not write code unless specifically requested. Do not invent repository
+structure or requirements.

@@ -1,0 +1,109 @@
+# RFC Critique
+
+Critically review the RFC as a thoughtful engineering colleague.
+
+The goal is not to rewrite the RFC or criticize its writing style. Identify
+risks, gaps, unclear assumptions, missing decisions, and questions that should
+be answered before implementation or approval.
+
+Do not invent facts. For every concern, explain which part of the RFC caused
+the concern. Quote a short excerpt or identify the relevant section when
+possible.
+
+Review the RFC across these areas:
+
+- Problem definition and success criteria
+- Scope and non-goals
+- Requirements and assumptions
+- Architecture and modularity
+- Data flow and failure modes
+- API, schema, and compatibility concerns
+- Security and privacy
+- Reliability and operability
+- Performance and scalability
+- Testing and rollout strategy
+- Monitoring and observability
+- Migration and rollback
+- Cost and operational ownership
+- Dependencies and long-term maintenance
+- Alternatives and trade-offs
+- Open decisions and unresolved ambiguity
+
+Produce the review in this format:
+
+# RFC Critique: [RFC title]
+
+## Overall assessment
+
+Give a concise assessment of the proposal's clarity, feasibility, and largest
+risk.
+
+## What is strong
+
+List the most convincing parts of the RFC.
+
+## Highest-priority concerns
+
+List the most important concerns first.
+
+For each concern, include:
+
+- Severity: Blocking, High, Medium, or Low
+- Concern
+- Evidence or affected section
+- Why it matters
+- Suggested resolution
+
+## Questions that should be answered
+
+Ask specific, intelligent questions that would affect the design, approval, or
+implementation.
+
+Group them into:
+
+### Requirements and scope
+
+[Questions]
+
+### Design and architecture
+
+[Questions]
+
+### Reliability and operations
+
+[Questions]
+
+### Security
+
+[Questions]
+
+### Testing and rollout
+
+[Questions]
+
+### Ownership and maintenance
+
+[Questions]
+
+Avoid asking questions whose answers would not change a decision.
+
+## Missing information
+
+List important information needed to evaluate the RFC that is not provided.
+
+## Suggested additions to the RFC
+
+Give a short list of concrete sections, diagrams, examples, or decisions that
+should be added.
+
+## Recommendation
+
+Choose one:
+
+- Approve
+- Approve with changes
+- Request revisions
+- Reject
+- Cannot determine from the available information
+
+Explain the recommendation briefly.

@@ -1,0 +1,51 @@
+# Implementation Re-Review
+
+Review the current branch or PR against the original task.
+
+Inspect the actual diff, surrounding code, tests, configuration, and relevant
+call sites. Do not assume the implementation is correct because tests pass.
+
+Check:
+
+- Every requirement is implemented
+- No requirement was misunderstood or only partially implemented
+- The behavior is correct, including edge cases and failure paths
+- Existing behavior was not unnecessarily broken
+- No unrelated or unnecessary changes were introduced
+- No temporary code, debug output, TODOs, dead code, or generated artifacts
+  were left behind
+- Error handling, validation, security, and permissions are appropriate
+- Tests meaningfully cover the change
+- Documentation and configuration are updated where necessary
+
+Prioritize real defects over style preferences. Do not suggest rewrites without
+a concrete benefit.
+
+Return:
+
+## Verdict
+
+Choose one: Ready, Ready with minor fixes, or Changes required.
+
+## Findings
+
+For each finding, include:
+
+- Severity: Blocker, High, Medium, or Low
+- File and line or relevant symbol
+- Problem
+- Why it matters
+- Recommended fix
+
+If there are no findings, say so explicitly.
+
+## Requirement checklist
+
+| Requirement | Status | Evidence or gap |
+|---|---|---|
+| [Requirement] | Complete / Partial / Missing | [Short explanation] |
+
+## Residual risks
+
+List only risks that remain after the implementation, or write "None identified".
+

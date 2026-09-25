@@ -1,0 +1,40 @@
+# Dependency Review
+
+Review the project's dependencies and dependency configuration.
+
+Inspect manifests, lockfiles, build files, and dependency-related scripts.
+
+Check:
+
+- Unused or duplicate dependencies
+- Missing lockfiles or unconstrained versions
+- Direct versus transitive dependencies
+- Major version risks and compatibility concerns
+- Deprecated or abandoned packages, where evidence is available
+- Known security issues, but do not claim current vulnerability status without
+  evidence or a security audit
+- License or supply-chain concerns
+- Dependency update and reproducibility practices
+
+Return:
+
+## Findings
+
+For each issue:
+
+- Severity: High, Medium, or Low
+- Dependency and version
+- Evidence
+- Risk
+- Recommended action
+
+## Dependency summary
+
+| Dependency | Version | Purpose | Status | Recommendation |
+|---|---|---|---|---|
+
+## Overall assessment
+
+Give a short assessment of dependency health and the highest-priority action.
+
+If no meaningful issues are found, say so explicitly.

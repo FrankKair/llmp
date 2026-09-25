@@ -1,0 +1,15 @@
+# Commit Preparation
+
+Inspect the current diff and propose:
+
+- A Git commit title of 50 characters or fewer
+- A concise body using brief bullet points
+- Any files that should be excluded from the commit
+- Any missing tests or documentation
+- Whether the change appears ready to commit
+- Do not include co-authored-by trailers
+
+Do not create a branch, commit, or push anything during this review.
+
+If I explicitly approve the proposal in a later message, the approved
+commit may be created and pushed according to my instructions.

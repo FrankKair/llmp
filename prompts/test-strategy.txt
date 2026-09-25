@@ -1,0 +1,48 @@
+# Test Strategy
+
+Design a practical test strategy for the requested change or current diff.
+
+Inspect the implementation, surrounding code, existing tests, test configuration,
+and CI configuration. Prefer tests that verify observable behavior.
+
+Return:
+
+## Coverage matrix
+
+| Behavior | Unit test | Integration test | End-to-end test | Existing coverage | Gap |
+|---|---|---|---|---|---|
+
+## Required tests
+
+For each recommended test include:
+
+- Test name
+- Location
+- Setup
+- Action
+- Expected result
+- Important variations
+
+Cover, where applicable:
+
+- Happy paths
+- Boundary values
+- Empty, null, malformed, and unexpected input
+- Authorization and permission failures
+- Timeouts and retries
+- Concurrency and duplicate operations
+- Partial failure and cleanup
+- Backward compatibility
+- Data migrations
+
+## Test quality concerns
+
+Identify tests that may pass without detecting real regressions, including
+brittle mocks, weak assertions, missing cleanup, and tests coupled to
+implementation details.
+
+## Recommended order
+
+List the highest-value tests to write first.
+
+Do not claim behavior is covered unless evidence exists in the repository.

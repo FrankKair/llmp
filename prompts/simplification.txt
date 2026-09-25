@@ -1,0 +1,44 @@
+# Simplification Review
+
+Look for unnecessary complexity in the current code or proposed change.
+
+Inspect abstractions, control flow, configuration, dependencies, duplication,
+error handling, and tests.
+
+Identify:
+
+- Abstractions with only one meaningful implementation
+- Unnecessary indirection
+- Duplicate logic
+- Overly broad interfaces
+- Configuration that should be a constant or convention
+- Dependencies replacing simple standard-library behavior
+- Error handling that obscures the real failure
+- Tests that add complexity without useful coverage
+- Premature extensibility
+- Dead code and compatibility layers that are no longer needed
+
+Return:
+
+## Findings
+
+For each finding:
+
+- Severity: Medium or Low
+- Location
+- Complexity introduced or retained
+- Why it makes the system harder to change or operate
+- Concrete simplification
+- Risk of making the change
+
+## Keep
+
+List abstractions or complexity that are justified by real requirements.
+
+## Suggested order
+
+Order simplifications by value and safety.
+
+Do not recommend rewrites or style changes without a concrete maintenance
+benefit.
+

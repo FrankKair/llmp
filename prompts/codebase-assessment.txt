@@ -1,0 +1,105 @@
+# Codebase Health Assessment
+
+Assess the engineering health of this codebase.
+
+Project context:
+[OPTIONAL: describe the project, stack, scope, and known constraints]
+
+Inspect the code, tests, configuration, dependencies, CI/CD, and documentation.
+Base conclusions on evidence. Mention relevant file paths, symbols, or commands.
+Do not invent metrics, vulnerabilities, tests, or practices.
+
+Use N/A when a category does not apply or cannot reasonably be assessed. Do not
+score missing evidence as zero.
+
+## Scoring
+
+Score each applicable category from 0 to 10:
+
+- 0: absent, broken, or dangerous
+- 3: weak and problematic
+- 5: adequate but inconsistent
+- 7: strong with some gaps
+- 10: exemplary and well maintained
+
+Use whole numbers. Explain scores briefly and avoid giving high scores based
+on a small sample.
+
+## Categories
+
+Assess:
+
+1. Correctness and reliability
+2. Maintainability and readability
+3. Architecture and modularity
+4. Testing
+5. Security
+6. Dependencies and supply chain
+7. CI/CD and release engineering
+8. Observability and operations
+9. Performance and scalability
+10. Documentation and developer experience
+
+## Output
+
+### Executive summary
+
+Give a concise assessment of the codebase's overall health. Mention the
+strongest area, weakest area, and most important risk.
+
+### Critical findings
+
+List urgent security, reliability, data-loss, availability, or operational
+issues.
+
+For each finding include:
+
+- Severity: Critical, High, Medium, or Low
+- Location
+- Problem
+- Impact
+- Recommended action
+
+If none are found, say so. This does not prove that no vulnerabilities exist.
+
+### Strengths
+
+List the most valuable engineering practices found, with evidence.
+
+### Improvements
+
+List the 5 highest-priority improvements, ordered by value.
+
+For each include:
+
+- Priority: P0, P1, P2, or P3
+- Recommendation
+- Why it matters
+- Suggested first step
+- Relevant file or directory
+
+Prefer focused improvements over broad rewrites.
+
+### Scorecard
+
+End with this table and put nothing after it.
+
+Calculate the overall average using applicable categories only:
+
+`average = sum of scores / number of applicable categories`
+
+Round the average to one decimal place.
+
+| Category | Score | Confidence | Comment and evidence |
+|---|---:|---|---|
+| Correctness and reliability |  |  |  |
+| Maintainability and readability |  |  |  |
+| Architecture and modularity |  |  |  |
+| Testing |  |  |  |
+| Security |  |  |  |
+| Dependencies and supply chain |  |  |  |
+| CI/CD and release engineering |  |  |  |
+| Observability and operations |  |  |  |
+| Performance and scalability |  |  |  |
+| Documentation and developer experience |  |  |  |
+| **Overall average** |  |  |  |
