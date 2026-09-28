@@ -75,12 +75,12 @@ export LLMP_DIR
 selected="$(
   printf '%s\n' "$prompt_list" |
     fzf \
-      --height='100%' \
-      --layout=reverse \
+      --height='70%' \
+      --layout=default \
       --border \
-      --preview-window='right:60%' \
+      --preview-window='right:60%:wrap' \
       --preview='
-        file="$LLMP_DIR/{}"
+        file=$LLMP_DIR/{}
         if [[ -f "$file" ]]; then
           cat -- "$file"
         else
