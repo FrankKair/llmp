@@ -28,13 +28,14 @@ For each finding:
 - Severity: Blocker, High, Medium, or Low
 - File and line or relevant symbol
 - Problem
-- Reproduction scenario
+- Verified reproduction, or a precise triggering scenario labeled unverified
 - Why it matters
 - Recommended fix
 
 ## Untested risks
 
-List important behavior that could not be verified.
+List important behavior that could not be verified. Distinguish observed
+defects from risks inferred from the code.
 
 If no likely bugs are found, say so explicitly and mention the main areas
 inspected.

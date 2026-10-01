@@ -9,8 +9,8 @@ Inspect the code, tests, configuration, dependencies, CI/CD, and documentation.
 Base conclusions on evidence. Mention relevant file paths, symbols, or commands.
 Do not invent metrics, vulnerabilities, tests, or practices.
 
-Use N/A when a category does not apply or cannot reasonably be assessed. Do not
-score missing evidence as zero.
+Use N/A only when a category does not apply. Use "Not assessed" when evidence
+is unavailable, and say what is missing. Do not score missing evidence as zero.
 
 ## Scoring
 
@@ -68,7 +68,8 @@ List the most valuable engineering practices found, with evidence.
 
 ### Improvements
 
-List the 5 highest-priority improvements, ordered by value.
+List up to 5 worthwhile improvements, ordered by value. Do not fill the list
+with low-value suggestions to reach a quota.
 
 For each include:
 
@@ -84,9 +85,11 @@ Prefer focused improvements over broad rewrites.
 
 End with this table and put nothing after it.
 
-Calculate the overall average using applicable categories only:
+Calculate the overall average using scored categories only:
 
-`average = sum of scores / number of applicable categories`
+`average = sum of scores / number of scored categories`
+
+If no category can be scored, report the overall average as N/A.
 
 Round the average to one decimal place.
 

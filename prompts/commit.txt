@@ -1,6 +1,7 @@
 # Commit Preparation
 
-Inspect the current diff and propose:
+Inspect `git status`, staged and unstaged diffs, and relevant untracked files.
+Propose:
 
 - A Git commit title of 50 characters or fewer
 - A concise body using brief bullet points
@@ -9,7 +10,10 @@ Inspect the current diff and propose:
 - Whether the change appears ready to commit
 - Do not include co-authored-by trailers
 
+If HEAD is detached, propose a branch name without a category prefix such as
+`feat/` or `chore/`. Do not create it during this review.
+
 Do not create a branch, commit, or push anything during this review.
 
-If I explicitly approve the proposal in a later message, the approved
-commit may be created and pushed according to my instructions.
+If I explicitly approve the proposal in a later message, create only the
+approved commit. Push only if I explicitly ask you to push.

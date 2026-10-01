@@ -59,7 +59,7 @@ For each concern, include:
 Ask specific, intelligent questions that would affect the design, approval, or
 implementation.
 
-Group them into:
+Group them under whichever of these headings are relevant. Omit empty groups:
 
 ### Requirements and scope
 
@@ -90,11 +90,12 @@ Avoid asking questions whose answers would not change a decision.
 ## Missing information
 
 List important information needed to evaluate the RFC that is not provided.
+Omit this section if nothing important is missing.
 
 ## Suggested additions to the RFC
 
 Give a short list of concrete sections, diagrams, examples, or decisions that
-should be added.
+should be added. Omit this section if no additions are needed.
 
 ## Recommendation
 

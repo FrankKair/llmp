@@ -45,15 +45,14 @@ Prompts can live anywhere under `prompts/`:
 
 ```
 prompts/
-├── coding/
-│   ├── review.txt
-│   └── explain.txt
+├── bug-hunter.txt
+├── commit.txt
+├── disciplined-coding.txt
 ├── tutorial/
 │   ├── language.txt
-│   ├── cs.txt
+│   ├── cs-tutorial.txt
 │   └── interview.txt
-└── writing/
-    └── edit.txt
+└── ...
 ```
 
 Add or edit a `.txt` file and it is immediately available the next time

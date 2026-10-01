@@ -2,6 +2,9 @@
 
 Review the current branch or PR against the original task.
 
+If the original task is unavailable, say so and limit the verdict to what
+can be established from the code and diff.
+
 Inspect the actual diff, surrounding code, tests, configuration, and relevant
 call sites. Do not assume the implementation is correct because tests pass.
 
@@ -43,9 +46,8 @@ If there are no findings, say so explicitly.
 
 | Requirement | Status | Evidence or gap |
 |---|---|---|
-| [Requirement] | Complete / Partial / Missing | [Short explanation] |
+| [Requirement] | Complete / Partial / Missing / Unverified | [Short explanation] |
 
 ## Residual risks
 
 List only risks that remain after the implementation, or write "None identified".
-

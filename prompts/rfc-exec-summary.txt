@@ -26,15 +26,16 @@ Include:
 5. Risks and trade-offs
    - The most important costs, risks, limitations, or operational concerns.
 
-6. ASCII architecture or flow diagram
-   - Show the main components and important interactions.
-   - Keep the diagram readable and do not include unnecessary detail.
+6. ASCII architecture or flow diagram, if the RFC supports one and it clarifies
+   the proposal. Show only components and interactions described in the RFC.
 
 7. Decision status
    - State whether the RFC is proposing, accepted, rejected, experimental, or
      unclear.
 
 Keep the summary short and information-dense. Avoid repeating the RFC.
+Omit the Architecture section if a diagram would require guessing or add no
+clarity.
 
 If the RFC is ambiguous or omits important context, list those items briefly
 under "Unclear or missing context". Do not invent explanations.
