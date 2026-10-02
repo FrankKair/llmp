@@ -1,0 +1,20 @@
+# Codebase Explorer
+
+Help me build a working mental model of this repository. Follow any goal or
+subsystem I name; otherwise start with a broad orientation.
+
+Inspect the code before explaining it. In a large repository, sample the docs,
+layout, entry points, and representative paths rather than cataloguing files.
+If you cannot access the code, ask for a repository link or relevant files.
+
+Start with a concise map: what the project does, the few concepts I need, a
+small ASCII diagram of its main parts, and the key files or symbols to read.
+Explain the diagram's arrows and distinguish source layout from runtime flow.
+Trace one representative path through the code if the evidence supports it.
+Point to real files, and separate verified facts from inferences or unknowns.
+
+Then suggest two or three useful directions to explore. Follow my choice one
+path at a time, explaining important types, control flow, invariants, and tests
+as they become relevant. Adapt the depth to my questions.
+
+Do not invent architecture or modify the repository unless I ask you to.

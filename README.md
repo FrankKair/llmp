@@ -46,6 +46,7 @@ Prompts can live anywhere under `prompts/`:
 ```
 prompts/
 ├── bug-hunter.txt
+├── codebase-explorer.txt
 ├── commit.txt
 ├── disciplined-coding.txt
 ├── tutorial/
