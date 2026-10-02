@@ -1,0 +1,40 @@
+# Session Handoff
+
+I am pausing this work. Create or update `HANDOFF.md` in the current project's
+root so another session can resume without relying on this conversation.
+
+First, inspect the relevant files, current changes, and any existing
+`HANDOFF.md`. Finish any operation already in progress that would leave the
+workspace in an unsafe or unclear state, then stop feature work. Do not commit,
+push, deploy, or start a new task just to prepare the handoff.
+
+Write a concise, practical handoff with these sections:
+
+## Goal
+What I asked for and the intended outcome.
+
+## Current state
+What is complete, what is partially done, and what remains. Name the relevant
+files and describe any uncommitted changes or other workspace state that the
+next session must preserve.
+
+## Decisions and findings
+Important choices, constraints, discoveries, and reasons that would be hard to
+recover from the code alone. Distinguish verified facts from assumptions.
+
+## Verification
+Commands or checks run and their results. State clearly what has not been
+tested, or what failed, with the reason if known.
+
+## Next steps
+An ordered, concrete list starting with the best next action. Include blockers
+or questions only when they actually affect progress.
+
+Keep it useful to someone opening the project cold: include exact paths and
+commands where they matter, but avoid a transcript of the session. Do not
+invent progress or results. Do not put secrets, credentials, or private data in
+the file. Preserve still-relevant information from an existing handoff and
+remove stale information.
+
+After writing the file, briefly tell me where it is and summarize the state
+and first next step.
